@@ -1,4 +1,4 @@
-const BASE_URL = "https://semana-14-rosy.vercel.app";
+const BASE_URL = "https://mi-proyecto-se.onrender.com";
 
 export default function handler(req, res) {
   const urls = ["/", "/blog", "/contacto"];
