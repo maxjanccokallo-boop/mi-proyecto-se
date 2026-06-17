@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://semana-14-rosy.vercel.app/api/sitemap
