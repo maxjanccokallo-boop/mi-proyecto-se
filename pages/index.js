@@ -14,7 +14,7 @@ export default function Home() {
         <meta property="og:image" content="/images/seo-image.png" />
         <meta property="og:type" content="website" />
 
-        <link rel="canonical" href="https://semana-14-rosy.vercel.app/" />
+        <link rel="canonical" href="https://mi-proyecto-se.onrender.com" />
       </Head>
 
       <h1>Bienvenido a mi página optimizada</h1>
