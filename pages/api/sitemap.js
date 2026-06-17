@@ -1,4 +1,4 @@
-const BASE_URL = "https://mi-proyecto-se.onrender.com";
+const BASE_URL = "https://mi-proyecto-seo.onrender.com";
 
 export default function handler(req, res) {
   const urls = ["/", "/blog", "/contacto"];
