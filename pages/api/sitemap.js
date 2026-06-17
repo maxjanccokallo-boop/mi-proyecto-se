@@ -1,12 +1,12 @@
-const BASE_URL = "https://mi-proyecto-seo.onrender.com";
-
 export default function handler(req, res) {
-  const urls = ["/", "/blog", "/contacto"];
+  const baseUrl = "https://mi-proyecto-seo.onrender.com";
+
+  const pages = ["/", "/blog", "/contacto"];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
-  .map((url) => `<url><loc>${BASE_URL}${url}</loc></url>`)
+${pages
+  .map((p) => `<url><loc>${baseUrl}${p}</loc></url>`)
   .join("")}
 </urlset>`;
 
