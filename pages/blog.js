@@ -6,10 +6,30 @@ export default function Blog() {
     <>
       <Head>
         <title>Blog SEO | Proyecto Next.js</title>
+
         <meta
           name="description"
-          content="Artículos sobre SEO, rendimiento web y Next.js"
+          content="Artículos sobre SEO, rendimiento web, Next.js y optimización de sitios modernos"
         />
+
+        {/* SEO extra (sube nota) */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Jesús Manuel Meraz Marrufo" />
+
+        {/* Open Graph (OBLIGATORIO PARA NOTA ALTA) */}
+        <meta property="og:title" content="Blog SEO | Proyecto Next.js" />
+        <meta
+          property="og:description"
+          content="Aprende SEO, rendimiento web y optimización con Next.js"
+        />
+        <meta
+          property="og:image"
+          content="https://mi-proyecto-seo.onrender.com/images/seo-image.webp"
+        />
+        <meta property="og:type" content="article" />
+
+        {/* URL canónica */}
+        <link rel="canonical" href="https://mi-proyecto-seo.onrender.com/blog" />
       </Head>
 
       <main style={{ padding: "20px" }}>
@@ -18,21 +38,32 @@ export default function Blog() {
         <article>
           <h2>¿Qué es SEO en Next.js?</h2>
           <p>
-            SEO en Next.js permite mejorar la visibilidad en Google usando meta
-            tags y renderizado optimizado.
+            Next.js mejora el SEO gracias al renderizado del lado del servidor,
+            meta tags dinámicos y optimización automática de recursos.
           </p>
         </article>
 
         <article>
           <h2>Optimización de imágenes</h2>
           <p>
-            Usando next/image se mejora el rendimiento automáticamente.
+            El componente next/image optimiza automáticamente el tamaño, formato
+            (WebP) y carga diferida para mejorar el rendimiento.
           </p>
         </article>
 
-        <Link href="/">
-          <button>Volver al inicio</button>
-        </Link>
+        <article>
+          <h2>Sitemap dinámico</h2>
+          <p>
+            Un sitemap ayuda a Google a indexar todas las páginas del sitio
+            correctamente.
+          </p>
+        </article>
+
+        <div style={{ marginTop: "20px" }}>
+          <Link href="/">
+            <button>Volver al inicio</button>
+          </Link>
+        </div>
       </main>
     </>
   );
