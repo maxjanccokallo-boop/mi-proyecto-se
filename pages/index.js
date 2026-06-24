@@ -1,6 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+// 1. Importamos la función 'dynamic' de Next.js
+import dynamic from "next/dynamic";
+
+// 2. Registramos el componente con Lazy Loading (importación diferida)
+const DynamicComponent = dynamic(() => import("../components/LargeComponent"), {
+  ssr: false,
+  loading: () => <p>Cargando componente...</p> // Muestra esto mientras se descarga
+});
 
 export default function Home() {
   return (
@@ -37,10 +45,11 @@ export default function Home() {
           width={800}
           height={400}
           alt="Imagen SEO del proyecto"
+          priority // Agregamos priority ya que es la imagen principal (mejora el SEO/LCP)
         />
 
         {/* BOTONES */}
-        <div style={{ marginTop: "20px" }}>
+        <div style={{ marginTop: "20px", marginBottom: "20px" }}>
           <Link href="/blog">
             <button style={{ marginRight: "10px" }}>Ir al Blog</button>
           </Link>
@@ -49,6 +58,12 @@ export default function Home() {
             <button>Contacto</button>
           </Link>
         </div>
+
+        <hr style={{ border: "0.5px solid #ccc", margin: "20px 0" }} />
+
+        {/* 3. AQUÍ RENDERIZAMOS EL COMPONENTE LAZY LOADING */}
+        <DynamicComponent />
+
       </main>
     </>
   );
